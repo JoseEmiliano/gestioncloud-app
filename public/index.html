@@ -8,43 +8,21 @@
     <title>GestionCloud | Ingeniería de Software & Ecosistema Digital</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
-        
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #010409; 
-            color: #f0f6fc; 
-            font-size: 18px; 
-        }
-        
-        .glass-card { 
-            background: rgba(13, 17, 23, 0.98); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(56, 189, 248, 0.35); 
-        }
-        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: #f0f6fc; font-size: 18px; }
+        .glass-card { background: rgba(13, 17, 23, 0.98); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.35); }
         .hover-lift { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .hover-lift:hover { 
-            transform: translateY(-8px); 
-            border-color: #38bdf8; 
-            box-shadow: 0 25px 50px -10px rgba(56, 189, 248, 0.4); 
-        }
-
+        .hover-lift:hover { transform: translateY(-8px); border-color: #38bdf8; box-shadow: 0 25px 50px -10px rgba(56, 189, 248, 0.4); }
         .text-glow { text-shadow: 0 0 20px rgba(56, 189, 248, 0.6); }
-        
-        .bg-mesh {
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(30, 64, 175, 0.12) 0, transparent 50%);
-        }
-
+        .bg-mesh { background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(30, 64, 175, 0.12) 0, transparent 50%); }
         p { line-height: 1.8; color: #c9d1d9; }
         strong { color: #ffffff; font-weight: 700; }
+        @media (max-width: 640px) { .mobile-title { font-size: 4.2rem !important; line-height: 0.95 !important; } }
     </style>
 </head>
 <body class="bg-mesh antialiased">
 
     <div class="fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-2 group">
-        <span class="bg-white text-slate-900 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity italic">
+        <span class="bg-white text-slate-900 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-lg shadow-xl opacity-0 md:group-hover:opacity-100 transition-opacity italic">
             ¿Duda técnica? Chateá con un experto
         </span>
         <a href="https://wa.me/541155741154" class="bg-[#25D366] p-5 rounded-full shadow-2xl hover:scale-110 transition-transform" target="_blank">
@@ -52,29 +30,29 @@
         </a>
     </div>
 
-    <nav class="fixed w-full z-[100] px-6 py-5 bg-[#010409]/98 border-b border-sky-500/30">
+    <nav class="fixed w-full z-[100] px-4 md:px-6 py-4 md:py-5 bg-[#010409]/98 border-b border-sky-500/30 backdrop-blur-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center font-bold uppercase tracking-widest text-[12px]">
-            <div class="flex items-center space-x-3">
-                <img src="logo-inpi.png" alt="GestionCloud Logo" class="h-16 md:h-24 w-auto object-contain block">
+            <div class="flex items-center">
+                <img src="logo-inpi.png" alt="GestionCloud" class="h-12 md:h-24 w-auto object-contain">
             </div>
             <div class="hidden md:flex space-x-12 items-center">
                 <a href="#ingenieria" class="text-white hover:text-sky-400 transition text-sm">Arquitectura</a>
                 <a href="#hardware" class="text-white hover:text-sky-400 transition text-sm">Logística</a>
                 <a href="#nosotros" class="text-white hover:text-sky-400 transition text-sm">ADN</a>
-                <a href="#contacto-form" class="bg-sky-500 text-slate-950 px-8 py-3 rounded-full hover:bg-white transition shadow-lg text-sm font-black uppercase">Agendar Cita</a>
             </div>
+            <a href="#contacto-form" class="bg-sky-500 text-slate-950 px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-white transition shadow-lg text-[10px] md:text-sm font-black uppercase">Agendar Cita</a>
         </div>
     </nav>
 
     <header class="min-h-screen flex items-center justify-center px-6 pt-24 text-center italic">
         <div class="max-w-6xl mx-auto">
-            <span class="inline-block py-2.5 px-8 mb-8 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-sm font-bold uppercase tracking-[0.5em]">
+            <span class="inline-block py-2.5 px-8 mb-8 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs md:text-sm font-bold uppercase tracking-[0.5em]">
                 Tu ecosistema digital. Privado. Integrado. Escalable.
             </span>
-            <h1 class="text-6xl md:text-[10.5rem] font-extrabold text-white mb-10 uppercase tracking-tighter leading-[0.85] text-glow">
+            <h1 class="mobile-title text-6xl md:text-[10.5rem] font-extrabold text-white mb-10 uppercase tracking-tighter leading-[0.85] text-glow">
                 Poder <br> <span class="bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent italic">Digital</span>
             </h1>
-            <p class="text-2xl md:text-4xl text-slate-200 max-w-4xl mx-auto mb-16 font-medium leading-tight italic">
+            <p class="text-xl md:text-4xl text-slate-200 max-w-4xl mx-auto mb-16 font-medium leading-tight italic">
                 Ecosistemas tecnológicos <span class="text-white border-b-4 border-sky-500">simples y sólidos</span> preparados para crecer.
             </p>
         </div>
@@ -82,65 +60,65 @@
 
     <section id="ingenieria" class="py-24 px-6 max-w-7xl mx-auto italic">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div class="p-12 glass-card rounded-[3rem] hover-lift border-sky-500/20">
+            <div class="p-10 md:p-12 glass-card rounded-[2.5rem] md:rounded-[3rem] hover-lift border-sky-500/20">
                 <i class="fas fa-layer-group text-sky-500 text-5xl mb-10"></i>
-                <h3 class="text-3xl font-bold text-white mb-6 uppercase italic tracking-tighter">Núcleo Operativo</h3>
-                <p class="text-lg md:text-xl text-slate-300 font-medium mb-8 leading-relaxed">Unificamos su operación en una nube propia: <strong>Landing + ERP + Gestión Documental</strong>. Todo conectado.</p>
-                <div class="text-[10px] font-black text-slate-500 uppercase tracking-widest pt-8 border-t border-white/5 italic">Integración: Dolibarr + Nextcloud</div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 uppercase italic tracking-tighter">Núcleo Operativo</h3>
+                <p class="text-base md:text-xl text-slate-300 font-medium mb-8 leading-relaxed">Unificamos su operación en una nube propia: <strong>Landing + ERP + Gestión Documental</strong>. Todo conectado.</p>
+                <div class="text-[10px] font-black text-sky-500 uppercase tracking-widest pt-8 border-t border-white/5 italic">Dolibarr + Nextcloud</div>
             </div>                        
-            <div class="p-12 glass-card rounded-[3rem] hover-lift">
+            <div class="p-10 md:p-12 glass-card rounded-[2.5rem] md:rounded-[3rem] hover-lift">
                 <i class="fas fa-bolt text-blue-500 text-5xl mb-10"></i>
-                <h3 class="text-3xl font-bold text-white mb-6 uppercase italic tracking-tighter">Automatización</h3>
-                <p class="text-lg md:text-xl text-slate-300 font-medium mb-8 leading-relaxed">Flujos con <strong>n8n</strong> para optimizar leads, alertas de stock y notificaciones de ventas automáticas.</p>
-                <div class="text-[10px] font-black text-slate-500 uppercase tracking-widest pt-8 border-t border-white/5 italic">Orquestación: n8n + Webhooks</div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 uppercase italic tracking-tighter">Automatización</h3>
+                <p class="text-base md:text-xl text-slate-300 font-medium mb-8 leading-relaxed">Flujos con <strong>n8n</strong> para optimizar leads, alertas de stock y notificaciones de ventas automáticas.</p>
+                <div class="text-[10px] font-black text-blue-500 uppercase tracking-widest pt-8 border-t border-white/5 italic">n8n + Webhooks</div>
             </div>
-            <div class="p-12 glass-card rounded-[3rem] hover-lift">
+            <div class="p-10 md:p-12 glass-card rounded-[2.5rem] md:rounded-[3rem] hover-lift">
                 <i class="fas fa-vault text-indigo-400 text-5xl mb-10"></i>
                 <h3 class="text-3xl font-bold text-white mb-6 uppercase italic tracking-tighter">Soberanía</h3>
-                <p class="text-lg md:text-xl text-slate-300 font-medium mb-8 leading-relaxed">Cada empresa opera en su propia <strong>VPS privada</strong>. Sin dependencias de licencias corporativas costosas.</p>
-                <div class="text-[10px] font-black text-slate-500 uppercase tracking-widest pt-8 border-t border-white/5 italic">Entorno: GCP + Docker + SSL</div>
+                <p class="text-base md:text-xl text-slate-300 font-medium mb-8 leading-relaxed">Cada empresa opera en su propia <strong>VPS privada</strong>. Sin dependencias de licencias corporativas costosas.</p>
+                <div class="text-[10px] font-black text-indigo-400 uppercase tracking-widest pt-8 border-t border-white/5 italic">GCP + Docker + SSL</div>
             </div>
         </div>
     </section>
 
-    <section id="hardware" class="py-32 px-6 bg-[#0d1117]/50 border-y border-white/10">
-        <div class="max-w-7xl mx-auto italic">
-            <h2 class="text-5xl font-black text-white uppercase italic mb-16 tracking-tighter">Hardware <span class="text-sky-500">Especializado</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-10 border border-slate-800 rounded-3xl bg-[#010409]">
+    <section id="hardware" class="py-24 md:py-32 px-6 bg-[#0d1117]/50 border-y border-white/10">
+        <div class="max-w-7xl mx-auto italic text-center md:text-left">
+            <h2 class="text-4xl md:text-5xl font-black text-white uppercase italic mb-16 tracking-tighter">Hardware <span class="text-sky-500">Especializado</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 border border-slate-800 rounded-3xl bg-[#010409]">
                     <span class="text-sky-500 text-xs font-bold uppercase tracking-widest">Handhelds</span>
                     <h5 class="text-white font-bold text-2xl mt-4 mb-4 italic">Honeywell CK65</h5>
-                    <p class="text-sm text-slate-400 italic font-medium leading-relaxed">Android Industrial para depósitos. El estándar de robustez regional.</p>
+                    <p class="text-sm text-slate-400 italic">Android Industrial para depósitos.</p>
                 </div>
-                <div class="p-10 border border-slate-800 rounded-3xl bg-[#010409]">
+                <div class="p-8 border border-slate-800 rounded-3xl bg-[#010409]">
                     <span class="text-sky-500 text-xs font-bold uppercase tracking-widest">Industrial Print</span>
                     <h5 class="text-white font-bold text-2xl mt-4 mb-4 italic">Zebra ZT Series</h5>
-                    <p class="text-sm text-slate-400 italic font-medium leading-relaxed">Chasis metálico. Impresión térmica de etiquetas con integración nativa a ERP.</p>
+                    <p class="text-sm text-slate-400 italic">Impresión térmica con integración ERP.</p>
                 </div>
-                <div class="p-10 border border-slate-800 rounded-3xl bg-[#010409]">
+                <div class="p-8 border border-slate-800 rounded-3xl bg-[#010409]">
                     <span class="text-sky-500 text-xs font-bold uppercase tracking-widest">Desktop Print</span>
                     <h5 class="text-white font-bold text-2xl mt-4 mb-4 italic">Honeywell PC42t</h5>
-                    <p class="text-sm text-slate-400 italic font-medium leading-relaxed">Fiabilidad para Retail. Soporte de cinta de 300m y conectividad Ethernet.</p>
+                    <p class="text-sm text-slate-400 italic">Fiabilidad para Retail y logística.</p>
                 </div>
-                <div class="p-10 border border-slate-800 rounded-3xl bg-[#010409]">
+                <div class="p-8 border border-slate-800 rounded-3xl bg-[#010409]">
                     <span class="text-sky-500 text-xs font-bold uppercase tracking-widest">Asesoramiento IT</span>
                     <h5 class="text-white font-bold text-2xl mt-4 mb-4 italic">Compra de Equipos</h5>
-                    <p class="text-sm text-slate-400 italic font-medium leading-relaxed">Asesoría experta en la adquisición de terminales y tecnología de campo.</p>
+                    <p class="text-sm text-slate-400 italic">Asesoría experta técnica industrial.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="nosotros" class="py-32 px-6 text-center italic bg-slate-900/20 border-y border-white/5">
+    <section id="nosotros" class="py-24 md:py-32 px-6 text-center italic bg-slate-900/20 border-y border-white/5">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-6xl font-black text-white uppercase italic tracking-tighter mb-12">Nuestra <span class="text-sky-500">Misión</span></h2>
-            <p class="text-2xl md:text-3xl text-slate-100 font-light leading-relaxed mb-12 italic">
+            <h2 class="text-5xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-12">Nuestra <span class="text-sky-500">Misión</span></h2>
+            <p class="text-xl md:text-3xl text-slate-100 font-light leading-relaxed mb-12 italic">
                 Impulsamos la transformación digital de PyMEs mediante ecosistemas tecnológicos <strong>integrados, privados y escalables</strong>.
             </p>
             <div class="p-10 border border-sky-500/20 rounded-3xl bg-black/40">
-                <h4 class="text-sky-500 font-black uppercase text-xs tracking-widest mb-6 italic">Visión a Largo Plazo</h4>
-                <p class="text-lg text-slate-400 italic">
-                    Evolucionamos hacia la integración de <strong>agentes de IA y automatización avanzada</strong>, construyendo progresivamente un entorno inteligente paso a paso.
+                <h4 class="text-sky-500 font-black uppercase text-xs tracking-widest mb-6 italic">Visión Estratégica</h4>
+                <p class="text-base md:text-lg text-slate-400 italic">
+                    Evolucionamos hacia la integración progresiva de <strong>IA y automatización avanzada</strong>, construyendo entornos inteligentes paso a paso.
                 </p>
             </div>
         </div>
@@ -148,34 +126,33 @@
 
     <section id="contacto-form" class="py-24 px-6 max-w-4xl mx-auto italic">
         <div class="text-center mb-16">
-            <h2 class="text-5xl font-black text-white uppercase tracking-tighter mb-4">Agendar <span class="text-sky-500">Cita</span></h2>
-            <p class="text-slate-400">Inicie su diagnóstico técnico. Tecnología propia para PyMEs que quieren crecer con base sólida.</p>
+            <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4">Agendar <span class="text-sky-500">Cita</span></h2>
+            <p class="text-slate-400">Inicie su diagnóstico técnico. Tecnología propia para PyMEs.</p>
         </div>
-        <div class="glass-card p-10 rounded-[3.5rem] border-sky-500/20">
-            <form action="https://formspree.io/f/xaqdkagr" method="POST" class="space-y-8">
-                <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] border-sky-500/20">
+            <form action="https://formspree.io/f/xaqdkagr" method="POST" class="space-y-6 md:space-y-8">
+                <input type="text" name="_gotcha" style="display:none">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <input type="text" name="nombre" required class="w-full bg-black/40 border border-slate-800 rounded-2xl px-6 py-4 text-white focus:border-sky-500 outline-none transition" placeholder="Nombre Completo">
                     <input type="text" name="empresa" class="w-full bg-black/40 border border-slate-800 rounded-2xl px-6 py-4 text-white focus:border-sky-500 outline-none transition" placeholder="Empresa / Rubro">
                 </div>
                 <input type="email" name="email" required class="w-full bg-black/40 border border-slate-800 rounded-2xl px-6 py-4 text-white focus:border-sky-500 outline-none transition" placeholder="gestioncloud@gmail.com">
                 <textarea name="mensaje" rows="4" required class="w-full bg-black/40 border border-slate-800 rounded-2xl px-6 py-4 text-white focus:border-sky-500 outline-none transition" placeholder="¿Cómo podemos optimizar su operación hoy?"></textarea>
-                <button type="submit" class="w-full bg-sky-500 text-slate-950 font-black uppercase tracking-[0.3em] py-5 rounded-2xl hover:bg-white transition shadow-lg text-sm">
-                    Enviar Solicitud de Diagnóstico
-                </button>
+                <button type="submit" class="w-full bg-sky-500 text-slate-950 font-black uppercase tracking-[0.3em] py-4 md:py-5 rounded-2xl hover:bg-white transition shadow-lg text-sm">Enviar Solicitud</button>
             </form>
         </div>
     </section>
 
-    <footer class="py-24 px-6 bg-[#010409] border-t-4 border-sky-500 shadow-[0_-20px_50px_rgba(56,189,248,0.1)] italic">
+    <footer class="py-24 px-6 bg-[#010409] border-t-4 border-sky-500 italic">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-20 mb-20 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20 mb-20 items-center">
                 <div class="text-center md:text-left">
-                    <span class="text-5xl font-black text-white italic uppercase tracking-tighter">Gestion<span class="text-sky-500">Cloud</span></span>
-                    <p class="text-white text-sm mt-8 font-bold uppercase tracking-[0.3em] opacity-90">
+                    <span class="text-4xl md:text-5xl font-black text-white italic uppercase tracking-tighter">Gestion<span class="text-sky-500">Cloud</span></span>
+                    <p class="text-white text-sm mt-8 font-bold uppercase tracking-[0.3em] opacity-90 leading-loose">
                         Ingeniería de Soberanía Digital <br> & Consultoría IT Senior
                     </p>
                 </div>                                
-                <div class="text-center">
+                <div class="text-center hidden md:block">
                     <h4 class="text-sky-500 font-black uppercase text-xs tracking-[0.4em] mb-10 italic">Proyección Regional</h4>
                     <div class="flex justify-center space-x-12 text-white font-black text-lg uppercase italic">
                         <span class="border-b-4 border-sky-500 pb-2">Argentina</span>
@@ -185,13 +162,13 @@
                 </div>
                 <div class="text-center md:text-right">
                     <h4 class="text-sky-500 font-black uppercase text-xs tracking-[0.4em] mb-8 italic">Contacto Senior</h4>
-                    <a href="https://wa.me/541155741154" class="text-4xl font-black text-white block hover:text-sky-500 transition tracking-tighter">+54 11 5574-1154</a>
+                    <a href="https://wa.me/541155741154" class="text-3xl md:text-4xl font-black text-white block hover:text-sky-500 transition tracking-tighter">+54 11 5574-1154</a>
                     <p class="text-sky-400 text-sm mt-4 font-mono font-bold tracking-widest italic uppercase">gestioncloud@gmail.com</p>
                 </div>
             </div>
             <div class="pt-16 border-t border-slate-900 text-center">
-                <div class="inline-block px-12 py-5 bg-sky-500/10 border-2 border-sky-500/30 rounded-full">
-                    <p class="text-white text-sm font-black uppercase tracking-[0.6em]">
+                <div class="inline-block px-8 md:px-12 py-4 md:py-5 bg-sky-500/10 border-2 border-sky-500/30 rounded-full">
+                    <p class="text-white text-[10px] md:text-sm font-black uppercase tracking-[0.6em]">
                         © 2026 ANALISTA DE SISTEMAS UNPAZ | INGENIERÍA DE PROCESOS
                     </p>
                 </div>
